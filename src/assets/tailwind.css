@@ -53,6 +53,16 @@
         width: 100%;
         font-size: 16px;
         padding: 8px 16px;
+        
+        /* 修改箭頭符號 */
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+
+        background-image: url('../../public/select-arrow.png');
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        background-position: right 20px center;
     }
 
     textarea {

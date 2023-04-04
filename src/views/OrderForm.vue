@@ -11,7 +11,7 @@
             <div class="grid md:grid-cols-2 md:gap-6">
                 <label for="first-name" class="block mb-5">
                     <p class="mb-2">名字</p>
-                    <input type="text" name="first-name" v-model="answer.firstName" @change="validation('firstName')">
+                    <input type="text" name="first-name" v-model="answer.firstName" @change="validation('firstName')" placeholder="請輸入名字">
                     <p class="mt-1 text-red-600 font-bold" v-if="errorMessage.firstName.required.failed">
                         {{ errorMessage.firstName.required.message }}
                     </p>
@@ -22,7 +22,7 @@
                 </label>
                 <label for="last-name" class="block mb-5">
                     <p class="mb-2">姓氏</p>
-                    <input type="text" name="last-name" v-model="answer.lastName" @change="validation('lastName')">
+                    <input type="text" name="last-name" v-model="answer.lastName" @change="validation('lastName')" placeholder="請輸入姓氏">
                     <p class="mt-1 text-red-600 font-bold" v-if="errorMessage.lastName.required.failed">
                         {{ errorMessage.lastName.required.message }}
                     </p>
@@ -34,7 +34,7 @@
             </div>
             <label for="phone" class="block mb-5">
                 <p class="mb-2">手機號碼</p>
-                <input type="number" name="phone" v-model="answer.phoneNumber" @change="validation('phoneNumber')">
+                <input type="number" name="phone" v-model="answer.phoneNumber" @change="validation('phoneNumber')" placeholder="請輸入手機號碼">
                 <p class="mt-1 text-red-600 font-bold" v-if="errorMessage.phoneNumber.required.failed">
                     {{ errorMessage.phoneNumber.required.message }}
                 </p>
@@ -45,7 +45,7 @@
             </label>
             <label for="email" class="block mb-5">
                 <p class="mb-2">電子郵件</p>
-                <input type="text" name="email" v-model="answer.email" @change="validation('email')">
+                <input type="text" name="email" v-model="answer.email" @change="validation('email')" placeholder="請輸入電子郵件">
                 <p class="mt-1 text-red-600 font-bold" v-if="errorMessage.email.required.failed">
                     {{ errorMessage.email.required.message }}
                 </p>
@@ -88,6 +88,7 @@
             <label for="design-style" class="block mb-5">
                 <p class="mb-2">選擇設計師風格</p>
                 <select name="design-style" id="" class="mb-1" v-model="answer.designStyle">
+                    <option value="" selected disabled>請選擇設計師風格</option>
                     <option value="Meili" selected>Meili</option>
                     <option value="Zoe">Zoe</option>
                     <option value="Michael">Michael</option>
@@ -100,6 +101,7 @@
             <label for="payment" class="block mb-5">
                 <p class="mb-2">付款方式</p>
                 <select name="payment" id="" class="mb-1" v-model="answer.payment">
+                    <option value="" selected disabled>請選擇付款方式</option>
                     <option value="貨到付款" selected>貨到付款</option>
                     <option value="線上支付">線上支付</option>
                 </select>
@@ -192,7 +194,7 @@ export default {
         reg: { failed: false, message: '收件地址不符合格式' }
       },
       designStyle: {
-        required: { failed: false, message: '請選擇設計風格' },
+        required: { failed: false, message: '請選擇設計師風格' },
         reg: { failed: false, message: '不符合格式' }
       },
       payment: {

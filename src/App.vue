@@ -55,6 +55,7 @@
     </div>
     <!-- 畫面右下角連結 -->
     <router-link to="/order-form" class="hidden lg:block fixed bottom-0 end-16 cursor-pointer">
+       <div class="bg-white border border-primary text-base font-bold text-center px-3 py-1 mb-2">客製我的毛孩圖</div>
        <img :src="require(`./assets/images/${currentLinkPage}.png`)" alt="">
     </router-link>
   </div>
