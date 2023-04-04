@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    p {
+        color: #3a3a3a;
+        font-size: 16px;
+    }
+
+    a {
+        color: #3a3a3a;
+        font-size: 16px;
+    }
+
+    router-link {
+        color: #3a3a3a;
+        font-size: 16px;
+    }
+
+    img {
+        display: inline-block;
+        margin: 0;
+    }
+
+    @font-face {
+        font-family: kalam;
+        src: url(../../public/font-family/Kalam-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: kalam;
+        src: url(../../public/font-family/Kalam-Regular.ttf);
+    }
+
+    input {
+        border: solid #ced4da 1px;
+        border-radius: 8px;
+        width: 100%;
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    select {
+        border: solid #ced4da 1px;
+        border-radius: 8px;
+        width: 100%;
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    textarea {
+        border: solid #ced4da 1px;
+        border-radius: 8px;
+        width: 100%;
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply px-12 py-2 rounded-full text-base border border-primary;
+    }
+
+    .btn-orange {
+        @apply bg-orange border-none;
+    }
+}
+
+@layer utilities {
+    .m-5px {
+        margin: 5px;
+    }
+
+    .mx-5px {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .my-5px {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .ms-5px {
+        margin-inline-start: 5px;
+    }
+
+    .me-5px {
+        margin-inline-end: 5px;
+    }
+
+    .mt-5px {
+        margin-top: 5px;
+    }
+
+    .mr-5px {
+        margin-right: 5px;
+    }
+
+    .mb-5px {
+        margin-bottom: 5px;
+    }
+
+    .ml-5px {
+        margin-left: 5px;
+    }
+
+    .font-32 {
+        font-size: 32px;
+    }
+
+    .w-100 {
+        width: 100px;
+    }
+
+    .w-166 {
+        width: 166px;
+    }
+
+    .w-200 {
+        width: 200px;
+    }
+
+    .w-310 {
+        width: 310px;
+    }
+
+    .w-312 {
+        width: 312px;
+    }
+
+    .w-348 {
+        width: 348px;
+    }
+
+    .w-350 {
+        width: 350px;
+    }
+
+    .w-872 {
+        width: 872px;
+    }
+
+
+    .max-w-350 {
+        max-width: 350px;
+    }
+
+    .max-w-872 {
+        max-width: 872px;
+    }
+
+    .max-w-1000 {
+        max-width: 1000px;
+    }
+
+    .text-kalam {
+        font-family: kalam;
+    }
+
+    .text-line-clamp-2 {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+}
