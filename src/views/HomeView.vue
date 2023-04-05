@@ -51,7 +51,7 @@
         <img src="../assets/images/pet-image/painting-huazie.png" class="w-full rounded-t-3xl" alt="">
         <div class="px-6">
           <p class="mt-7 font-bold">等家中-華仔</p>
-          <p class="mt-4">目前7個月大的華仔，是個愛笑的貪吃鬼，喜歡吃西瓜還有蓮霧，是一隻吃素的乖狗...</p>
+          <p class="mt-4 text-line-clamp-2">目前7個月大的華仔，是個愛笑的貪吃鬼，喜歡吃西瓜還有蓮霧，是一隻吃素的乖狗，每次吃飽便躺下來呼呼大睡，看著她自在的樣子，讓人也不知不覺放鬆下來</p>
           <div class="w-full h-px mt-6" style="background-color: #ececec;"></div>
           <div class="text-center my-4">
             <button type="button" class="text-base w-auto">MORE</button>
@@ -63,7 +63,7 @@
         <img src="../assets/images/pet-image/painting-di.png" class="w-full rounded-t-3xl" alt="">
         <div class="px-6">
           <p class="mt-7 font-bold">等家中-小呆</p>
-          <p class="mt-4">小呆有著圓圓的大眼睛，一歲的他來自台中，原本陪著一位老奶奶生活，上個月.</p>
+          <p class="mt-4 text-line-clamp-2">小呆有著圓圓的大眼睛，一歲的他來自台中，原本陪著一位老奶奶生活，上個月奶奶生病住院，於是轉由志工照顧，期待你成為他的下一個家人</p>
           <div class="w-full h-px mt-6" style="background-color: #ececec;"></div>
           <div class="text-center my-4">
             <button type="button" class="text-base w-auto">MORE</button>
@@ -75,7 +75,7 @@
         <img src="../assets/images/pet-image/painting-snow.png" class="w-full rounded-t-3xl" alt="">
         <div class="px-6">
           <p class="mt-7 font-bold">等家中-Snow</p>
-          <p class="mt-4">看起來很兇但特別怕打雷的Snow，很喜歡吃冰，冰冰的水也喜歡，如果摸他的額頭...</p>
+          <p class="mt-4 text-line-clamp-2">看起來很兇但特別怕打雷的Snow，很喜歡吃冰，冰冰的水也喜歡，如果摸他的額頭會發出很像貓的叫聲，相當有活力，不適合關籠會發出像獅子的叫聲。 如果照片看起來像你家人，歡迎帶回家一家團圓!</p>
           <div class="w-full h-px mt-6" style="background-color: #ececec;"></div>
           <div class="text-center my-4">
             <button type="button" class="text-base w-auto">MORE</button>

@@ -13,7 +13,7 @@ export default createStore({
         vaccine: '已施打',
         img: 'real-black',
         painting: 'painting-black',
-        description: '目前7個月大的華仔，是個愛笑的貪吃鬼，喜歡吃西瓜還有蓮霧，是一隻吃素的乖狗...'
+        description: '小黑十分親人，特別喜歡和小朋友玩，許多人看到他都被他的熱情感染，如果你希望他成為你家的開心果，小黑很歡迎你成為他的家人'
       },
       花花: {
         name: '花花',
@@ -25,7 +25,7 @@ export default createStore({
         vaccine: '已施打',
         img: 'real-hua',
         painting: 'painting-hua',
-        description: '小呆有著圓圓的大眼睛，一歲的他來自台中，原本陪著一位老奶奶生活，上個月..'
+        description: '花花兩個月以前被志工發現前腳受傷倒在路邊，就醫後經過志工細心照顧已恢復健康，'
       },
       華仔: {
         name: '華仔',
@@ -37,7 +37,7 @@ export default createStore({
         vaccine: '已施打',
         img: 'real-huazie',
         painting: 'painting-huazie',
-        description: '看起來很兇但特別怕打雷的Snow，很喜歡吃冰，冰冰的水也喜歡，如果摸他的額頭會發出很像貓的叫聲，相當有活力，不適合關籠會發出像獅子的叫聲。 如果照片看起來像你家人，歡迎帶回家一家團圓!'
+        description: '目前7個月大的華仔，是個愛笑的貪吃鬼，喜歡吃西瓜還有蓮霧，是一隻吃素的乖狗，每次吃飽便躺下來呼呼大睡，看著她自在的樣子，讓人也不知不覺放鬆下來'
       },
       Smile: {
         name: 'Smile',

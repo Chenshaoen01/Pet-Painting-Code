@@ -3,9 +3,10 @@
     <!-- 頁首選單 -->
     <div class="flex flex-col lg:flex-row py-3 px-4 lg:px-16 lg:py-12 bg-white">
       <div class="flex justify-between">
-        <router-link to="/" class="lg:w-auto justify-between items-center">
+        <span class="lg:w-auto justify-between items-center cursor-pointer"
+        @click="linkActiveToggle(1)"  data-link="/">
           <img src="./assets/images/logo.png" alt="logo" style="width: 119px; height: 40px">
-        </router-link>
+        </span>
         <img src="./assets/images/hamburger-button.png" alt="hamburger-button" style="width:30px; height:30px"
           class="lg:hidden cursor-pointer" @click="linkAreaToggle">
       </div>
