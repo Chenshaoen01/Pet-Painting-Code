@@ -83,6 +83,6 @@
         </div>
       </div>
     </div>
-    <router-link to="/adoption-list" class="btn me-6 my-7">查看更多浪浪</router-link>
+    <router-link to="/adoption-list" class="btn my-7 whitespace-nowrap">查看更多浪浪</router-link>
   </div>
 </template>
