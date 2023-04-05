@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col items-center pb-20 px-20">
-        <img src="../assets/images/title02.png" class="mx-auto mb-4 md:mb-6" alt="">
+        <img src="../assets/images/title02.png" class="mx-auto mb-4 md:mb-6" alt="adoption title image">
         <div class="flex flex-col md:flex-row  max-w-350 md:max-w-none px-5 items-start">
             <!-- 浪浪資訊 -->
             <div class="rounded-3xl bg-white px-4 pt-8 pb-4 md:me-6 mb-6 md:mb-0 w-fit"
@@ -62,9 +62,18 @@ export default {
     const state = store.state
     console.log(state.adoptionData)
 
+    // 進入頁面捲動到最上方
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
+    scrollToTop()
+
+    // 從 params 取得動物資料
     const currentName = route.params.id
     console.log(currentName)
-
     const data = ref(state.adoptionData[currentName])
 
     return {

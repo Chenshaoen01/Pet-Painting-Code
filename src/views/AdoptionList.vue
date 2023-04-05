@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col items-center pb-20">
-    <img src="../assets/images/title02.png" class="mx-auto mb-4 lg:mb-6" alt="">
+    <img src="../assets/images/title02.png" class="mx-auto mb-4 lg:mb-6" alt="adoption title img">
     <!-- 卡片 -->
     <div class="px-2 lg:px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
       <div class="rounded-3xl bg-white" style="box-shadow:0px 4px 8px #00000014;" v-for="(item) in pageDataForEachPage[pageData.currentPage - 1]"
         :key="item.title">
-        <img :src="require(`../assets/images/pet-image/${item.painting}.png`)" class="w-full rounded-t-3xl" alt="">
+        <img :src="require(`../assets/images/pet-image/${item.painting}.png`)" class="w-full rounded-t-3xl" :alt="`${item.name} image`">
         <div class="px-6 flex flex-col">
           <p class="mt-7 font-bold">等家中 - {{ item.name }}</p>
           <p class="mt-4 mb-6 text-line-clamp-2">{{ item.description }}</p>
@@ -19,13 +19,13 @@
     <ul class="flex mt-14">
       <li class="me-3 cursor-pointer" v-if="pageData.hasPre"
       @click="changePage(pageData.currentPage - 1)">
-        <img src="../assets/images/chevron-left.svg" style="width: 16px; height:28px;" alt="">
+        <img src="../assets/images/chevron-left.svg" style="width: 16px; height:28px;" alt="previous button">
       </li>
       <li v-for="(item, i) in pageData.pageNum" :key="item"
       class="page-option cursor-pointer text-kalam text-xl font-bold me-3" @click="changePage(i+1)">{{item}}</li>
       <li class="cursor-pointer" v-if="pageData.hasNext"
        @click="changePage(pageData.currentPage + 1)">
-        <img src="../assets/images/chevron-right.svg" style="width: 16px; height:28px;" alt="">
+        <img src="../assets/images/chevron-right.svg" style="width: 16px; height:28px;" alt="nexxt button">
       </li>
     </ul>
   </div>
@@ -37,6 +37,15 @@ import { useStore } from 'vuex'
 
 export default {
   setup () {
+    // 進入頁面捲動到最上方
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
+    scrollToTop()
+
     // 取得資訊
     const store = useStore()
     const adoptionDataGetKeys = { ...store.state.adoptionData }

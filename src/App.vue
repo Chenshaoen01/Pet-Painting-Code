@@ -1,10 +1,10 @@
 <template>
-  <div class="relative">
+  <div class="relative pt-20">
     <!-- 頁首選單 -->
-    <div class="flex flex-col lg:flex-row py-3 px-4 lg:px-16 lg:py-12 bg-white">
+    <div class="flex flex-col lg:flex-row py-5 px-4 lg:px-16 bg-white fixed top-0 w-full">
       <div class="flex justify-between">
         <span class="lg:w-auto justify-between items-center cursor-pointer"
-        @click="linkActiveToggle(1)"  data-link="/">
+        @click="linkActiveToggle(1, true)"  data-link="/">
           <img src="./assets/images/logo.png" alt="logo" style="width: 119px; height: 40px">
         </span>
         <img src="./assets/images/hamburger-button.png" alt="hamburger-button" style="width:30px; height:30px"
@@ -55,9 +55,9 @@
       </div>
     </div>
     <!-- 畫面右下角連結 -->
-    <router-link to="/order-form" class="hidden lg:block fixed bottom-0 end-16 cursor-pointer">
+    <router-link to="/order-form" class="hidden lg:block fixed bottom-0 end-16 cursor-pointer" @click="linkActiveToggle()">
        <div class="bg-white border border-primary text-base font-bold text-center px-3 py-1 mb-2">客製我的毛孩圖</div>
-       <img :src="require(`./assets/images/${currentLinkPage}.png`)" alt="">
+       <img :src="require(`./assets/images/${currentLinkPage}.png`)" alt="fixed link image">
     </router-link>
   </div>
 </template>
@@ -83,7 +83,7 @@ export default {
     }
 
     // 按下選項切換顏色及分頁
-    const linkActiveToggle = (num) => {
+    const linkActiveToggle = (num, logoOrNot) => {
       // 切換選項顏色
       const linkHTMLCollection = document.getElementsByClassName('router-link')
       const link = [...linkHTMLCollection]
@@ -109,8 +109,13 @@ export default {
         }
       })
 
-      // 關閉選單區域
-      linkAreaToggle()
+      // 關閉、展開選單區域
+      if (logoOrNot !== true) {
+        linkAreaToggle()
+      } else {
+        const linkArea = document.getElementById('link-area')
+        linkArea.classList.add('hidden')
+      }
     }
 
     // 右下角連結圖示切換

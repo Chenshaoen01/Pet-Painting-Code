@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center pb-20">
-    <img src="../assets/images/title01.png" class="mx-auto mb-4 lg:mb-10" alt="">
+    <img src="../assets/images/title01.png" class="mx-auto mb-4 lg:mb-10" alt="painting page title image">
     <div class="flex flex-col lg:flex-row">
       <div class="mb-8 lg:mb-0 lg:ml-8 lg:me-40">
         <p class="text-2xl text-kalam text-center lg:text-left font-bold mb-4">Designer</p>
@@ -36,7 +36,7 @@
       <div class="px-4 w-full">
         <div class="lg:px-0 grid grid-cols-2 lg:grid-cols-4 gap-4">
           <div v-for="(item) in paintingShown" :key="item">
-            <img :src="require(`../assets/images/pet-image/${item.img}.png`)" class="w-full rounded-3xl" alt="">
+            <img :src="require(`../assets/images/pet-image/${item.img}.png`)" class="w-full rounded-3xl" :alt="`${item.img}`">
           </div>
         </div>
       </div>
@@ -49,6 +49,15 @@ import { ref, watch } from 'vue'
 
 export default {
   setup () {
+    // 進入頁面捲動到最上方
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
+    scrollToTop()
+
     // 設定畫家及圖片資料
     const currentPainter = ref('All')
     const paintingInfo = ref([

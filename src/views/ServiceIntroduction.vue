@@ -21,6 +21,15 @@
 import { ref } from 'vue'
 export default {
   setup () {
+    // 進入頁面捲動到最上方
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
+    scrollToTop()
+
     const stepInfo = ref([
       {
         imgUrl: 'step01',
