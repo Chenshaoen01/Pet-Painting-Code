@@ -119,7 +119,7 @@
                 <span class="me-2">備註說明</span>
                 <textarea name="message" id="" cols="30" rows="5" v-model="answer.message"></textarea>
             </label>
-            <p class="text-2xl font-bold text-center mt-10 mb-12">總金額 NT$ 300</p>
+            <p class="text-2xl font-bold text-center mt-10 mb-12">總金額 NT$ {{ price }}</p>
             <div class="text-center mb-10">
                 <button type="button" class="btn btn-orange text-2xl" @click="validateAll">
                     送出訂購資訊
@@ -130,7 +130,7 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 export default {
   setup () {
     // 進入頁面捲動到最上方
@@ -250,8 +250,25 @@ export default {
       })
     }
 
+    // 計算總金額
+    const price = ref(300)
+    watch(
+      [() => answer.value.giftPackage,
+        () => answer.value.noFramePainting],
+      ([giftPackageOrNot, noFramePaintingorNot]) => {
+        price.value = 300
+        if (giftPackageOrNot) {
+          price.value += 100
+        }
+        if (noFramePaintingorNot) {
+          price.value += 250
+        }
+      }
+    )
+
     return {
       answer,
+      price,
       rule,
       errorMessage,
       validation,

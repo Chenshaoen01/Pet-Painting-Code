@@ -51,7 +51,12 @@
         </div>
       </div>
       <div class="bg-primary py-6">
-        <p class="text-white text-center text-sm">Copyright © 2021 撿到寶.All rights reserved.</p>
+        <p class="text-white text-center text-sm pb-2">
+          本網站僅作為個人作品使用，無商業用途
+        </p>
+        <p class="text-white text-center text-sm">
+          設計稿由六角學院提供
+        </p>
       </div>
     </div>
     <!-- 畫面右下角連結 -->
